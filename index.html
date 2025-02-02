@@ -1,0 +1,139 @@
+
+
+https://www.cricbuzz.com/
+74
+            background-color: #555;
+75
+        }
+76
+​
+77
+        .tablink {
+78
+            background-color: inherit;
+79
+            color: white;
+80
+            border: none;
+81
+            outline: none;
+82
+            cursor: pointer;
+83
+            padding: 14px 20px;
+84
+            transition: 0.3s;
+85
+            flex: 0 0 auto; /* Prevent flex items from shrinking */
+86
+        }
+87
+​
+88
+        .tablink:hover {
+89
+            background-color: #777;
+90
+        }
+91
+​
+92
+        .tabcontent {
+93
+            display: none;
+94
+            padding: 20px;
+95
+            border-top: none;
+96
+        }
+97
+​
+98
+        .tabcontent iframe {
+99
+            width: 100%;
+100
+            height: calc(100vh - 120px); /* Adjust height based on your layout */
+101
+            border: none;
+102
+        }
+103
+​
+104
+        /* Responsive Design */
+105
+        @media (max-width: 600px) {
+106
+            .tabs {
+107
+                flex-direction: row; /* Ensure tabs remain horizontal on small screens */
+108
+            }
+109
+​
+110
+            .tablink {
+111
+                padding: 10px 15px; /* Adjust padding for smaller screens */
+112
+            }
+113
+        }
+114
+    </style>
+115
+</head>
+116
+<body>
+117
+    <header>
+118
+        <div class="title-bar">
+119
+            <h1>SSCPL 2025</h1>
+120
+            <div class="dropdown">
+121
+                <button class="dropbtn">&#9776;</button>
+122
+                <div class="dropdown-content">
+123
+                    <a href="#">Option 1</a>
+124
+                    <a href="#">Option 2</a>
+125
+                    <a href="#">Option 3</a>
+126
+                </div>
+127
+            </div>
+128
+        </div>
+129
+    </header>
+130
+​
+131
+    <nav class="tabs">
+132
+        <button class="tablink" onclick="openTab('tab1')">Tab 1</button>
+133
+        <button class="tablink" onclick="openTab('tab2')">Tab 2</button>
+134
+        <button class="tablink" onclick="openTab('tab3')">Tab 3</button>
+135
+        <button class="tablink" onclick="openTab('tab4')">Tab 4</button>
+136
+        <button class="tablink" onclick="openTab('tab5')">Tab 5</button>
+137
+        <button class="tablink" onclick="openTab('tab6')">Tab 6</button>
+Post settings
+Labels
+No matching suggestions
+Published on
+1/31/25 11:14 PM
+Permalink
+Location
+Options
