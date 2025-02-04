@@ -3,184 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Webpage</title>
+    <title>404 Not Found</title>
     <style>
-        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Title Bar */
-        .title-bar {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
         }
-
-        .title-bar h1 {
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1.5rem;
             margin: 0;
         }
-
-        /* Dropdown Menu */
-        .dropdown {
-            position: relative;
+        a {
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 1rem;
             display: inline-block;
         }
-
-        .dropbtn {
-            background-color: #333;
-            color: white;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            right: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Tabs */
-        .tabs {
-            display: flex;
-            overflow-x: auto; /* Enable horizontal scrolling */
-            white-space: nowrap; /* Prevent wrapping of tabs */
-            background-color: #555;
-        }
-
-        .tablink {
-            background-color: inherit;
-            color: white;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 20px;
-            transition: 0.3s;
-            flex: 0 0 auto; /* Prevent flex items from shrinking */
-        }
-
-        .tablink:hover {
-            background-color: #777;
-        }
-
-        .tabcontent {
-            display: none;
-            padding: 20px;
-            border-top: none;
-        }
-
-        .tabcontent iframe {
-            width: 100%;
-            height: calc(100vh - 120px); /* Adjust height based on your layout */
-            border: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .tabs {
-                flex-direction: row; /* Ensure tabs remain horizontal on small screens */
-            }
-
-            .tablink {
-                padding: 10px 15px; /* Adjust padding for smaller screens */
-            }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="title-bar">
-            <h1>My Webpage</h1>
-            <div class="dropdown">
-                <button class="dropbtn">&#9776;</button>
-                <div class="dropdown-content">
-                    <a href="https://www.example.com" target="_blank">Option 1</a>
-                    <a href="privacy-policy.html" target="_blank">Option 2</a>
-                    <a href="https://www.github.com" target="_blank">Option 3</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <nav class="tabs">
-        <button class="tablink" onclick="openTab('tab1')">Tab 1</button>
-        <button class="tablink" onclick="openTab('tab2')">Tab 2</button>
-        <button class="tablink" onclick="openTab('tab3')">Tab 3</button>
-        <button class="tablink" onclick="openTab('tab4')">Tab 4</button>
-        <button class="tablink" onclick="openTab('tab5')">Tab 5</button>
-        <button class="tablink" onclick="openTab('tab6')">Tab 6</button>
-    </nav>
-
-    <div id="tab1" class="tabcontent">
-        <iframe src="page1.html"></iframe>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! The page you're looking for doesn't exist.</p>
+        <a href="/">Go back to the homepage</a>
     </div>
-    <div id="tab2" class="tabcontent">
-        <iframe src="page2.html"></iframe>
-    </div>
-    <div id="tab3" class="tabcontent">
-        <iframe src="page3.html"></iframe>
-    </div>
-    <div id="tab4" class="tabcontent">
-        <iframe src="page4.html"></iframe>
-    </div>
-    <div id="tab5" class="tabcontent">
-        <iframe src="page5.html"></iframe>
-    </div>
-    <div id="tab6" class="tabcontent">
-        <iframe src="page6.html"></iframe>
-    </div>
-
-    <script>
-        function openTab(tabName) {
-            var i, tabcontent, tablinks;
-
-            // Hide all tab content
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Remove the background color of all tablinks
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].style.backgroundColor = "";
-            }
-
-            // Show the specific tab content
-            document.getElementById(tabName).style.display = "block";
-
-            // Add a background color to the button used to open the tab content
-            event.currentTarget.style.backgroundColor = "#777";
-        }
-
-        // Open the first tab by default
-        document.getElementsByClassName("tablink")[0].click();
-    </script>
 </body>
 </html>
